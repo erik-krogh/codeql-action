@@ -237,7 +237,7 @@ export async function runQueries(
 
     const codeql = await getCodeQL(config.codeQLCmd);
     try {
-      if (hasPackWithCustomQueries) {
+      if (hasPackWithCustomQueries && false) { // DISABLED FOR QL-for-QL
         logger.info("Performing analysis with custom CodeQL Packs.");
         logger.startGroup(`Downloading custom packs for ${language}`);
 
